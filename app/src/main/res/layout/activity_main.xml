@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberSigned|numberDecimal"
-        android:hint="Temperature"/>
+        android:hint="Temperature"
+        android:inputType="numberSigned|numberDecimal" />
 
     <RadioGroup
         android:id="@+id/radioGroup1"
@@ -40,6 +40,13 @@
         android:layout_height="wrap_content"
         android:onClick="convertTemperature"
         android:text="@string/calc" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:text="reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clearText" />
 
 
 </LinearLayout>
