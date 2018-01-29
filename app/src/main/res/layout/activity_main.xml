@@ -38,7 +38,7 @@
         android:id="@+id/calculateButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
+        android:onClick="convertTemperature"
         android:text="@string/calc" />
 
 

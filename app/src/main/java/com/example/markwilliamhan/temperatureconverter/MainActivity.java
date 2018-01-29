@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void onClick(View view) {
+    public void convertTemperature(View view) {
         switch (view.getId()) {
             case R.id.calculateButton1:
                 RadioButton celsiusButton = (RadioButton) findViewById(R.id.radioButton1);
