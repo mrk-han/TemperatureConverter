@@ -1,8 +1,11 @@
 package com.example.markwilliamhan.temperatureconverter;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,5 +19,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.calculateButton1:
+                RadioButton celsiusButton = (RadioButton) findViewById(R.id.radioButton1);
+                RadioButton fahrenheitButton = (RadioButton) findViewById(R.id.radioButton2);
+                if (text.getText().length() == 0) {
+                    Toast.makeText(this, "Please enter a valid number", Toast.LENGTH_LONG).show();
+                }
+
+                float inputValue = Float.parseFloat(text.getText().toString());
+                if (celsiusButton.isChecked()) {
+                    text.setText(String.valueOf(ConverterUtil.convertFahrenheitToCelsius(inputValue)));
+                    celsiusButton.setChecked(false);
+                    fahrenheitButton.setChecked(true);
+                } else {
+                    text.setText(String.valueOf(ConverterUtil.convertCelsiusToFahrenheit(inputValue)));
+                    fahrenheitButton.setChecked(false);
+                    celsiusButton.setChecked(true);
+                }
+                break;
+
+
+        }
+    }
 
 }
