@@ -10,6 +10,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private EditText text;
+    private RadioButton celsiusButton;
+    private RadioButton fahrenheitButton;
 
 
     @Override
@@ -17,14 +19,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         text = (EditText) findViewById(R.id.inputValue);
+        celsiusButton = (RadioButton) findViewById(R.id.radioButton1);
+        fahrenheitButton = (RadioButton) findViewById(R.id.radioButton2);
     }
 
 
     public void convertTemperature(View view) {
         switch (view.getId()) {
             case R.id.calculateButton1:
-                RadioButton celsiusButton = (RadioButton) findViewById(R.id.radioButton1);
-                RadioButton fahrenheitButton = (RadioButton) findViewById(R.id.radioButton2);
+
 
 
                 if (text.getText().toString().equals("") || text.getText().length() == 0) {
@@ -46,9 +49,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    // This method resets the app to how it first is when it opens (reset everything)
     public void clearText(View view) {
         text.setText("");
-        RadioButton celsiusButton = (RadioButton) findViewById(R.id.radioButton1);
         celsiusButton.setChecked(true);
 
 
