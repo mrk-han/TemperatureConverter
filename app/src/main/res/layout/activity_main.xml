@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal"
-        android:text="@string/app_name" />
+        android:hint="Temperature"/>
 
     <RadioGroup
         android:id="@+id/radioGroup1"
